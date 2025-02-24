@@ -1,5 +1,5 @@
-import { Search } from "lucide-react";
 import React from "react";
+import { CiSearch } from "react-icons/ci";
 
 interface FormProps {
   data: string;
@@ -26,7 +26,7 @@ const Form: React.FC<FormProps> = ({ data, setter }) => {
         type="submit"
         className="relative rounded-[3rem] text-white bg-black p-2 
         ">
-        <Search />
+        <CiSearch />
       </button>
     </form>
   );

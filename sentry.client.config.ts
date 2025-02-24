@@ -6,7 +6,7 @@ import * as Sentry from "@sentry/nextjs";
 
 Sentry.init({
   dsn: "https://d6a942d6ad5f54542f5e99708c014235@o4508858768556032.ingest.us.sentry.io/4508858770456576",
-  beforeSend(event, hint) {
+  beforeSend(event) {
     // Check if it is an exception, and if so, show the report dialog
     if (event.exception && event.event_id) {
       Sentry.showReportDialog({ eventId: event.event_id });

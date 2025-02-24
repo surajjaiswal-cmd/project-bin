@@ -1,7 +1,7 @@
 import { client } from "@/sanity/lib/client";
 import { PROJECT_VIEWS_QUERY } from "@/sanity/lib/queries";
 import { writeClient } from "@/sanity/lib/write-client";
-import { Eye } from "lucide-react";
+import { FiEye } from "react-icons/fi";
 import React from "react";
 
 const Views = async ({ id }: { id: string }) => {
@@ -18,7 +18,7 @@ const Views = async ({ id }: { id: string }) => {
 
   return (
     <div className="bg-black text-white btn cursor-default fixed z-30 bottom-4 left-3 flex ">
-      <Eye className="size-6 mr-1" /> {views}
+      <FiEye className="size-6 mr-1" /> {views}
     </div>
   );
 };
