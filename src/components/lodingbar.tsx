@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import NProgress from "nprogress";
 import "nprogress/nprogress.css";
@@ -8,18 +8,22 @@ import "nprogress/nprogress.css";
 NProgress.configure({ showSpinner: false });
 
 const LoadingBar = () => {
+  const [loading, setLoading] = useState(false);
   const pathname = usePathname(); 
 
   useEffect(() => {
-    NProgress.start(); 
-    const timer = setTimeout(() => NProgress.done(), 1000); 
+    if (loading) NProgress.start(); 
     return () => {
-      clearTimeout(timer);
-      NProgress.done();
+      NProgress.done(); 
+      setLoading(false);
     };
+  }, [loading]);
+
+  useEffect(() => {
+    setLoading(true); 
   }, [pathname]);
 
-  return null; 
+  return null;
 };
 
 export default LoadingBar;

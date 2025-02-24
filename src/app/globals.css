@@ -80,6 +80,8 @@
   }
 }
 
+
+
 .capitalize-first-letter {
   text-transform: capitalize;
 }
@@ -107,7 +109,7 @@ h1 {
 .main-page-ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20;
+  /* gap: 20; */
   box-sizing: border-box;
   margin: 0 auto;
 }
@@ -115,7 +117,7 @@ h1 {
 .user-page-ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20;
+  /* gap: 20; */
 }
 
 

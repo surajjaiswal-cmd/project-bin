@@ -1,7 +1,7 @@
-import Link from "next/link";
 import React from "react";
 import SignOut from "./sign-out";
 import SignIn from "./sign-in";
+import LoadingAction from "./loadingaction";
 
 interface Session {
   id: string;
@@ -21,38 +21,44 @@ const HandelSingInOut = ({
     <>
       {session ? (
         <>
-          <Link href={`/user/${session?.id}`} onClick={handleShowClick}>
-            <span className="md:text-[.8rem]  text-[1.50rem] capitalize-first-letter">
+          <LoadingAction href={`/user/${session?.id}`}>
+            <span
+              className="md:text-[.8rem]  text-[1.50rem] capitalize-first-letter"
+              onClick={handleShowClick}>
               {session.user?.name || "User"}
             </span>
-          </Link>
+          </LoadingAction>
           <hr className="my-2" />
-          <Link href={"/project/create/"} onClick={handleShowClick}>
-            <span className="md:text-[.8rem]  text-[1.50rem] ">Create</span>
-          </Link>
+          <LoadingAction href={"/project/create/"}>
+            <span
+              className="md:text-[.8rem]  text-[1.50rem] "
+              onClick={handleShowClick}>
+              Create
+            </span>
+          </LoadingAction>
           <hr className="my-2" />
           <SignOut />
           <hr className="my-2" />
-          <Link href={"/about"} onClick={handleShowClick}>
+          <LoadingAction href={"/about"} >
             <span
               className="md:text-[.8rem]  text-[1.50rem]  "
               onClick={handleShowClick}>
               About
             </span>
-          </Link>
+          </LoadingAction>
           <hr className="my-2" />
         </>
       ) : (
         <>
           <SignIn />
           <hr className="my-2" />
-          <Link href={"/about"}>
+          <LoadingAction href={"/about"}>
             <span
               className="md:text-[.8rem]  text-[1.50rem] "
               onClick={handleShowClick}>
               About
             </span>
-          </Link>
+          </LoadingAction>
           <hr className="my-2" />
         </>
       )}

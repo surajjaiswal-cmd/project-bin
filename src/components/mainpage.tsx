@@ -24,7 +24,7 @@ const MainPage: React.FC<ProjectProps> = ({ posts }) => {
       <BoxesFile showForm={true} inputData={inputData} setter={setInputData} />
       <div className="container">
         <h3 className="my-4" id="main-page-project">Trendy Projects</h3>
-        <ul className="main-page-ul">
+        <ul className="main-page-ul gap-3">
           {posts?.length > 0 ? (
             <Project posts={filteredPosts} />
           ) : (

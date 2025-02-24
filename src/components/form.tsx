@@ -1,5 +1,5 @@
 import React from "react";
-import { CiSearch } from "react-icons/ci";
+import { FaSearch } from "react-icons/fa";
 
 interface FormProps {
   data: string;
@@ -17,16 +17,16 @@ const Form: React.FC<FormProps> = ({ data, setter }) => {
       <input
         type="text"
         placeholder="Search Projets"
-        className=" w-75 relative border-none rounded-full outline-none "
+        className=" w-75 relative border-none rounded-full outline-none  ps-1"
         value={data}
         onChange={(e) => setter(e.target.value)}
       />
 
       <button
         type="submit"
-        className="relative rounded-[3rem] text-white bg-black p-2 
+        className="relative rounded-[3rem] text-[#958e8e] p-2 
         ">
-        <CiSearch />
+        <FaSearch />
       </button>
     </form>
   );

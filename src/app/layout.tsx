@@ -8,6 +8,7 @@ import { Toaster } from "@/components/ui/toaster";
 import LoadingBar from "@/components/lodingbar";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
+import { GoTop } from "@/components/gotop";
 const poppins = Poppins({ weight: "400", subsets: ["latin"] });
 
 
@@ -33,11 +34,13 @@ export default function RootLayout({
 
       <body className={`${poppins.className} tracking-wide`}>
         <LayoutWrapper>
-          <LoadingBar/>
+          <LoadingBar />
           {children}
+          <GoTop />
+
           <Toaster />
           <Analytics />
-          <SpeedInsights/>
+          <SpeedInsights />
         </LayoutWrapper>
       </body>
     </html>

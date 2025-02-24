@@ -1,19 +1,17 @@
 import Image from "next/image";
-import React from "react";
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
-import Link from "next/link";
 import { ProjectTypeCard } from "./projectcard";
-// import { log } from "console";
+import LoadingAction from "./loadingaction";
 
 interface ProjectProps {
   posts: ProjectTypeCard[];
 }
 
 const Project: React.FC<ProjectProps> = ({ posts }) => {
-  
+ 
   
   return (
-        <>
+    <>
       {posts?.map((post, index) => (
         <li key={index}>
           <CardContainer className="inter-var">
@@ -26,32 +24,32 @@ const Project: React.FC<ProjectProps> = ({ posts }) => {
               <CardItem
                 as="p"
                 translateZ="60"
-                className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300  max-h-20 overflow-y-auto p-2 scrollbar-hide line-clamp-2"  >
+                className="text-neutral-500 min-h-16 text-sm max-w-sm mt-2 dark:text-neutral-300  max-h-20 overflow-y-auto p-2 scrollbar-hide line-clamp-2">
                 {post.description}
               </CardItem>
               <CardItem translateZ="100" className="w-full mt-4">
-                <Link href={`/project/${post._id}`}>
+                <LoadingAction href={`/project/${post._id}`}>
                   <Image
                     src={post.image || "https:placehild.co/"}
-                    height='1000'
-                    width='1000'
+                    height="1000"
+                    width="1000"
                     className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
                     alt={`${post.title}`}
                     priority
                   />
-                </Link>
+                </LoadingAction>
               </CardItem>
               <div className="flex justify-between items-center mt-10">
                 <CardItem
-                  as={Link}
+                  as={LoadingAction}
                   href={`/user/${post.author?._id}`}
                   translateZ={20}
-                  className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white">
+                  className="  rounded-xl text-xs font-normal dark:text-white">
                   {post.author?.name || "Unknown Author"} <br />@
                   {post.author?.username || "Unknown Author"}
                 </CardItem>
                 <CardItem
-                  as={Link}
+                  as={LoadingAction}
                   href={`/project/${post._id}`}
                   translateZ={20}
                   className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold">

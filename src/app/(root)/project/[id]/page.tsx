@@ -1,10 +1,10 @@
 import { BoxesFile } from "@/components/boxes";
+import LoadingAction from "@/components/loadingaction";
 import UserProjects from "@/components/userproject";
 import Views from "@/components/views";
 import { client } from "@/sanity/lib/client";
 import { PROJECT_BY_ID_QUERY } from "@/sanity/lib/queries";
 import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import React, { Suspense } from "react";
 
@@ -43,7 +43,7 @@ const Project = async (props: paramsType) => {
         />
         <div className="space-y-5 mt-10 max-w-4xl mx-auto">
           <div className="flex-between gap-5">
-            <Link
+            <LoadingAction
               href={`../user/${post.author?._id}`}
               className="flex gap-2 items-center mb-3">
               <Image
@@ -61,7 +61,7 @@ const Project = async (props: paramsType) => {
                   @{post.author?.username}
                 </p>
               </div>
-            </Link>
+            </LoadingAction>
             <h3>{post.title}</h3>
             <p>{post.category}</p>
           </div>
@@ -73,7 +73,7 @@ const Project = async (props: paramsType) => {
           <Views id={id} />
           <hr className="my-3" />
           <p className="mb-3 fs-5"> More Project By {post.author?.name || "Not Found"} </p>
-          <ul className="main-page-ul">
+          <ul className="main-page-ul gap-3">
             {authorId && <UserProjects id={authorId} />}
           </ul>
         </Suspense>

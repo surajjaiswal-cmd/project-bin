@@ -52,7 +52,7 @@ const IdPage = async (props: paramsType) => {
             fallback={
               <h1 className="container text-center mt-10">Loading...</h1>
             }>
-            <ul className="user-page-ul">
+            <ul className="user-page-ul gap-3">
               <UserProjects id={id} />
             </ul>
           </Suspense>
