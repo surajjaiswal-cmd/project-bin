@@ -23,7 +23,7 @@ const NavBar = async () => {
           />
           
         </LoadingAction>
-        <div className="gap-2  d-none d-md-flex ">
+        <div className="gap-2  d-none d-md-flex items-center ">
           <HandelSingInOut session={session} />
         </div>
         <div className=" d-md-none ">
