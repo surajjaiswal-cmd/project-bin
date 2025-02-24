@@ -1,5 +1,5 @@
 import MainPage from "@/components/mainpage";
-import { sanityFetch } from "@/sanity/lib/live";
+import { sanityFetch, SanityLive } from "@/sanity/lib/live";
 import { PROJECT_QUERY } from "@/sanity/lib/queries";
 
 
@@ -9,5 +9,11 @@ export default async function Home() {
       query: PROJECT_QUERY,
     });
 
-  return <MainPage posts={posts} />;
+  return (
+    <>
+     
+      <MainPage posts={posts} />
+      <SanityLive />
+    </>
+  );
 }

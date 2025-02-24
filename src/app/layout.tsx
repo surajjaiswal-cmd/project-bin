@@ -6,7 +6,10 @@ import { Poppins } from "next/font/google";
 import "easymde/dist/easymde.min.css";
 import { Toaster } from "@/components/ui/toaster";
 import LoadingBar from "@/components/lodingbar";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 const poppins = Poppins({ weight: "400", subsets: ["latin"] });
+
 
 export const metadata: Metadata = {
   title: "Project Bin",
@@ -33,6 +36,8 @@ export default function RootLayout({
           <LoadingBar/>
           {children}
           <Toaster />
+          <Analytics />
+          <SpeedInsights/>
         </LayoutWrapper>
       </body>
     </html>
