@@ -18,6 +18,11 @@ Sentry.init({
   integrations: [
     Sentry.replayIntegration(),
     Sentry.browserTracingIntegration(),
+    Sentry.feedbackIntegration({
+      colorSchema: "system",
+      isNameRequired: true,
+      isEmailRequired: true,
+    }),
   ],
   tracePropagationTargets: ["https://myproject.org", /^\/api/],
   // Define how likely traces are sampled. Adjust this value in production, or use tracesSampler for greater control.
