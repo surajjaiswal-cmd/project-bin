@@ -1,12 +1,13 @@
 "use client";
 import { handleSignOut } from "@/lib/authActions";
+import LoadingAction from "./loadingaction";
 
 export default function SignOut() {
   return (
     <form>
-      <button onClick={handleSignOut} className="md:text-[.8rem]  text-[1.50rem]">
+      <LoadingAction onClick={handleSignOut} className="md:text-[.8rem]  text-[1.50rem]">
         Sign Out
-      </button>
+      </LoadingAction>
     </form>
   );
 }
