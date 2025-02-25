@@ -20,7 +20,6 @@ const Project: React.FC<ProjectProps> = ({ posts }) => {
                 {post.title}
               </CardItem>
               <CardItem
-                as="p"
                 translateZ="60"
                 className="text-neutral-500 min-h-16 text-sm max-w-sm mt-2 dark:text-neutral-300  max-h-20 overflow-y-auto p-2 scrollbar-hide line-clamp-2">
                 {post.description}
@@ -28,7 +27,7 @@ const Project: React.FC<ProjectProps> = ({ posts }) => {
               <CardItem translateZ="100" className="w-full mt-4">
                 <LoadingAction href={`/project/${post._id}`}>
                   <Image
-                    src={post.image || "https:placehild.co/"}
+                    src={post.image || "https:placehild.co/1000"}
                     height={1000}
                     width={1000}
                     className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
@@ -39,10 +38,9 @@ const Project: React.FC<ProjectProps> = ({ posts }) => {
               </CardItem>
               <div className="flex justify-between items-center mt-10">
                 <CardItem
-               
                   translateZ={20}
                   className="  rounded-xl text-xs font-normal dark:text-white">
-                  <LoadingAction  href={`/user/${post.author?._id}`}>
+                  <LoadingAction href={`/user/${post.author?._id}`}>
                     {post.author?.name || "Unknown Author"} <br />@
                     {post.author?.username || "Unknown Author"}
                   </LoadingAction>

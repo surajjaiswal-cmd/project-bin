@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import LayoutWrapper from "@/components/layoutwrapper";
-import Script from "next/script";
 import { Poppins } from "next/font/google";
 import "easymde/dist/easymde.min.css";
 import { Toaster } from "@/components/ui/toaster";

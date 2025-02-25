@@ -36,7 +36,9 @@ const SecondNavbar = ({ session }: { session?: Session }) => {
 
   return (
     <div className="">
-      <button className={`me-3 text-[1.5rem] ${show && "d-none"}`} onClick={handleShowClick}>
+      <button
+        className={`me-3 text-[1.5rem] ${show && "d-none"}`}
+        onClick={handleShowClick}>
         <HiMiniBars3 />
       </button>
 
@@ -84,7 +86,7 @@ const SecondNavbar = ({ session }: { session?: Session }) => {
               <span className=" text-[1.50rem]">Connect US</span>
               <span className="connect-us flex flex-row justify-start ">
                 <LoadingAction
-                  href="https://www.LoadingActionedin.com/in/suraj-jaiswal-1518a5275/"
+                  href="https://www.linkedin.com/in/suraj-jaiswal-1518a5275/"
                   target="blenk"
                   className=" text-[1.50rem] px-4 ">
                   <FaLinkedin />

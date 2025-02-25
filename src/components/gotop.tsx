@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { FaArrowUpLong } from "react-icons/fa6";
 
 export const GoTop = () => {
   const [gotop, setGotop] = useState(true);
@@ -36,7 +37,7 @@ export const GoTop = () => {
         e.preventDefault();
         window.scrollTo({ top: 0, behavior: "smooth" });
       }}>
-      <i className="fa-solid fa-arrow-up"></i>
+      <FaArrowUpLong />
     </Link>
   );
 };
