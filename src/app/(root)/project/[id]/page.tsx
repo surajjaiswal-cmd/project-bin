@@ -37,7 +37,7 @@ const Project = async (props: paramsType) => {
           src={post.image || "https://placehold.co/"}
           height={1000}
           width={900}
-          className="rounded-xl w-full h-[40rem]"
+          className="rounded-xl w-full h-auto"
           alt={`${post.title}`}
           priority
         />

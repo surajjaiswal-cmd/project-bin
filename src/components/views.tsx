@@ -17,8 +17,11 @@ const Views = async ({ id }: { id: string }) => {
     .commit();
 
   return (
-    <div className="bg-black text-white btn cursor-default fixed z-30 bottom-4 left-3 flex ">
-      <FiEye className="size-6 mr-1" /> {views}
+    <div className="btn btn-white border shadow-md cursor-default fixed z-30 bottom-4 left-3 flex items-center py-0 px-2">
+      <div className="mr-1">
+        <FiEye />
+      </div>
+      <div > {views}</div>
     </div>
   );
 };

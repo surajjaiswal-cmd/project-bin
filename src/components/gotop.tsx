@@ -26,12 +26,13 @@ export const GoTop = () => {
   return (
     <Link
       href="#"
-      className={`btn btn-dark ${gotop ? "d-none" : "d-block"}`}
+      className={`btn btn-white border shadow-md ${gotop ? "d-none" : "d-block"}`}
       style={{
         position: "fixed",
-        bottom: "5rem",
+        bottom: "4rem",
         right: "1rem",
         zIndex: "500",
+        padding: ".5rem",
       }}
       onClick={(e) => {
         e.preventDefault();
