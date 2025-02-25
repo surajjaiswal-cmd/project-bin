@@ -7,7 +7,7 @@ export const metadata = {
 const Terms = () => {
   return (
     <div className="container mx-auto px-6 py-10">
-      <h1 className="text-center my-5 font-extrabold text-[2.5rem] underline">
+      <h1 className="text-center my-5 font-extrabold  underline">
         Terms & Conditions
       </h1>
 

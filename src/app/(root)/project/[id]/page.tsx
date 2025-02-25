@@ -36,8 +36,8 @@ const Project = async (props: paramsType) => {
         <Image
           src={post.image || "https://placehold.co/"}
           height={1000}
-          width={1000}
-          className="w-full h-auto rounded-xl"
+          width={900}
+          className="rounded-xl w-full h-[40rem]"
           alt={`${post.title}`}
           priority
         />
@@ -52,6 +52,7 @@ const Project = async (props: paramsType) => {
                 width={64}
                 height={64}
                 className="w-12 h-12 rounded-full"
+                priority
               />
               <div>
                 <p className="text-20-medium">
@@ -72,7 +73,10 @@ const Project = async (props: paramsType) => {
         <Suspense fallback={<p>loding...</p>}>
           <Views id={id} />
           <hr className="my-3" />
-          <p className="mb-3 fs-5"> More Project By {post.author?.name || "Not Found"} </p>
+          <p className="mb-3 fs-5">
+            {" "}
+            More Project By {post.author?.name || "Not Found"}{" "}
+          </p>
           <ul className="main-page-ul gap-3">
             {authorId && <UserProjects id={authorId} />}
           </ul>

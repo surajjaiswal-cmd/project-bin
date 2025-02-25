@@ -3,6 +3,9 @@ import React, { useState } from "react";
 import HandelSingInOut from "./handelsinginout";
 import LoadingAction from "./loadingaction";
 import ContactForm from "./contect";
+import { FaLinkedin } from "react-icons/fa";
+import { IoLogoGithub } from "react-icons/io";
+import { HiMiniBars3 } from "react-icons/hi2";
 
 interface Session {
   id: string;
@@ -33,8 +36,8 @@ const SecondNavbar = ({ session }: { session?: Session }) => {
 
   return (
     <div className="">
-      <button className={`me-3  ${show && "d-none"}`} onClick={handleShowClick}>
-        <i className="fa-solid fa-bars fs-3"></i>
+      <button className={`me-3 text-[1.5rem] ${show && "d-none"}`} onClick={handleShowClick}>
+        <HiMiniBars3 />
       </button>
 
       <div className={`second-navbar-nav ${show && "d-flex"}`}>
@@ -77,20 +80,20 @@ const SecondNavbar = ({ session }: { session?: Session }) => {
             </LoadingAction>
             <hr className="my-2" />
 
-            <div>
+            <div className="flex flex-row justify-start">
               <span className=" text-[1.50rem]">Connect US</span>
-              <span className="connect-us ">
+              <span className="connect-us flex flex-row justify-start ">
                 <LoadingAction
                   href="https://www.LoadingActionedin.com/in/suraj-jaiswal-1518a5275/"
                   target="blenk"
                   className=" text-[1.50rem] px-4 ">
-                  <i className="fa-brands fa-linkedin"></i>
+                  <FaLinkedin />
                 </LoadingAction>
                 <LoadingAction
                   href="https://github.com/surajjaiswal-cmd"
                   target="blenk"
                   className=" text-[1.50rem] px-4 ">
-                  <i className="fa-brands fa-github"></i>
+                  <IoLogoGithub />
                 </LoadingAction>
               </span>
             </div>

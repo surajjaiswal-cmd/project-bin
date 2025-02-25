@@ -28,9 +28,9 @@ export const GoTop = () => {
       className={`btn btn-dark ${gotop ? "d-none" : "d-block"}`}
       style={{
         position: "fixed",
-        bottom: "3rem",
+        bottom: "5rem",
         right: "1rem",
-        zIndex: "50",
+        zIndex: "500",
       }}
       onClick={(e) => {
         e.preventDefault();

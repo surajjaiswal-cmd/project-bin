@@ -8,8 +8,6 @@ interface ProjectProps {
 }
 
 const Project: React.FC<ProjectProps> = ({ posts }) => {
- 
-  
   return (
     <>
       {posts?.map((post, index) => (
@@ -31,8 +29,8 @@ const Project: React.FC<ProjectProps> = ({ posts }) => {
                 <LoadingAction href={`/project/${post._id}`}>
                   <Image
                     src={post.image || "https:placehild.co/"}
-                    height="1000"
-                    width="1000"
+                    height={1000}
+                    width={1000}
                     className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
                     alt={`${post.title}`}
                     priority
@@ -41,19 +39,20 @@ const Project: React.FC<ProjectProps> = ({ posts }) => {
               </CardItem>
               <div className="flex justify-between items-center mt-10">
                 <CardItem
-                  as={LoadingAction}
-                  href={`/user/${post.author?._id}`}
+               
                   translateZ={20}
                   className="  rounded-xl text-xs font-normal dark:text-white">
-                  {post.author?.name || "Unknown Author"} <br />@
-                  {post.author?.username || "Unknown Author"}
+                  <LoadingAction  href={`/user/${post.author?._id}`}>
+                    {post.author?.name || "Unknown Author"} <br />@
+                    {post.author?.username || "Unknown Author"}
+                  </LoadingAction>
                 </CardItem>
                 <CardItem
-                  as={LoadingAction}
-                  href={`/project/${post._id}`}
                   translateZ={20}
                   className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold">
-                  Details
+                  <LoadingAction href={`/project/${post._id}`}>
+                    Details
+                  </LoadingAction>
                 </CardItem>
               </div>
             </CardBody>

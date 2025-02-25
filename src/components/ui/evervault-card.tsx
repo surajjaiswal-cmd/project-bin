@@ -60,7 +60,7 @@ export const EvervaultCard = ({
                 width={100}
                 height={100}
                 className="w-28 h-28 auto rounded-full border"
-                priority
+                priority={true}
               />
             </span>
           </div>

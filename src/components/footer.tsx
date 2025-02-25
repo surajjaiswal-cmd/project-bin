@@ -2,6 +2,8 @@ import Image from "next/image";
 import React from "react";
 import ContactForm from "./contect";
 import LoadingAction from "./loadingaction";
+import { IoLogoGithub } from "react-icons/io";
+import { FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -11,9 +13,9 @@ const Footer = () => {
         <LoadingAction href="/" className="content-center  justify-center w-25">
           <Image
             src="/logo.png"
-            alt=" logo.png"
-            width="70"
-            height="70"
+            alt="logo"
+            width={70}
+            height={70}
             priority
             className="w-20 h-auto"
           />
@@ -35,18 +37,18 @@ const Footer = () => {
         </div>
         <div>
           <div className="font-bold mb-2 underline">Connect US</div>
-          <div className="connect-us flex justify-start">
+          <div className="connect-us flex flex-row justify-start">
             <LoadingAction
               href="https://www.linkedin.com/in/suraj-jaiswal-1518a5275/"
               target="blenk"
               className="my-2 text-[.9rem] fs-5 ">
-              <i className="fa-brands fa-linkedin"></i>
+              <FaLinkedin />
             </LoadingAction>
             <LoadingAction
               href="https://github.com/surajjaiswal-cmd"
               target="blenk"
               className="my-2 text-[.9rem] mx-4 fs-5">
-              <i className="fa-brands fa-github"></i>
+              <IoLogoGithub />
             </LoadingAction>
           </div>
         </div>
@@ -57,6 +59,9 @@ const Footer = () => {
           </div>
         </div>
       </section>
+      <p className="container text-[.6rem] py-2">
+        @ 2025, Project Bin Made With All Love By Suraj Jaiswal
+      </p>
     </footer>
   );
 };

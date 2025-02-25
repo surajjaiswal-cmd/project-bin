@@ -7,10 +7,7 @@ export const metadata = {
 const About = () => {
   return (
     <div className="container mx-auto px-6 py-10">
-
-    
-
-      <h1 className="text-center my-5 font-extrabold text-[2.5rem] underline">
+      <h1 className="text-center my-5 font-extrabold underline">
         About Project Bin
       </h1>
 
@@ -129,9 +126,8 @@ const About = () => {
           Project Bin covers a wide range of technologies, including:
         </p>
         <ul className="list-disc pl-5 text-lg mt-2">
-          <li>💻 Frontend: React.js, Next.js, Vue.js</li>
-          <li>⚙️ Backend: Node.js, Express.js, Django, Flask</li>
-          <li>📊 Data Science & AI: Python, TensorFlow, Machine Learning</li>
+          <li>💻 Frontend: React.js, Next.js</li>
+          <li>⚙️ Backend: Sanity, Sentry, Auth, Emailjs</li>
           <li>⛓️ Blockchain & Web3: Solidity, Ethereum, Smart Contracts</li>
           <li>📡 API & Automation: REST APIs, GraphQL, Automation Scripts</li>
         </ul>

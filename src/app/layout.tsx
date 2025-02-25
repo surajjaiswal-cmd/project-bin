@@ -25,10 +25,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <Script
-          src="https://kit.fontawesome.com/3635c4cce0.js"
-          strategy="afterInteractive"
-          crossOrigin="anonymous"></Script>
         <link rel="icon" href="/title.jpg" />
       </head>
 

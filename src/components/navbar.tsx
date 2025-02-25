@@ -6,22 +6,20 @@ import { auth } from "@/auth";
 import LoadingAction from "./loadingaction";
 
 const NavBar = async () => {
-  
   const session: Session | null = await auth();
 
   return (
     <div className="container-fluid border-b-2 p-0">
-      <header className="py- container flex items-center justify-between">
+      <header className="container flex items-center justify-between">
         <LoadingAction href="/">
           <Image
             src="/logo.png"
             alt=" logo"
-            height="60"
-            width="60"
+            height={60}
+            width={60}
             priority
-            className="w-100 h-auto"
+            className="w-full h-auto"
           />
-          
         </LoadingAction>
         <div className="gap-2  d-none d-md-flex items-center ">
           <HandelSingInOut session={session} />

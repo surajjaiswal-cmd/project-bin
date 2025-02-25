@@ -7,8 +7,8 @@ export const metadata = {
 const TechStack = () => {
   return (
     <div className="container mx-auto px-6 py-10">
-      <h1 className="text-center my-5 font-extrabold text-[2.5rem] underline">
-        Tech Stack Used in Project Bin
+      <h1 className="text-center my-5 font-extrabold  underline">
+        Tech Stack 
       </h1>
 
       <section className="mb-8">
